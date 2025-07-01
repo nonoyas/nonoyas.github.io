@@ -42,7 +42,7 @@
         <h4 class="text-xl font-bold">CVE 리포트 자동화 시스템</h4>
         <p class="mt-2">NVD 데이터 수집 → CVSS/CWE 기반 리포트 자동 생성 및 메일링.</p>
       </div>
-      <div onclick="openModal('img/IoC_list.pdf', true)" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
+      <div onclick="openModal('img/IoC.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">OTX IoC 파이프라인</h4>
         <p class="mt-2">OTX·Twitter 등에서 IoC 1,000건 이상 수집 → 중복 제거 및 보고서 자동화.</p>
       </div>
@@ -105,23 +105,21 @@
     © 2025 조성근. All rights reserved.
   </footer>
 
-  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden z-50 overflow-y-auto"> <div class="relative max-w-6xl mx-auto p-4 min-h-screen flex items-center justify-center"> <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-3xl font-bold z-10">×</button>
-      <div id="modalContainer" class="w-full h-full rounded shadow-lg bg-white flex-grow"></div>
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+    <div class="relative max-w-6xl mx-auto p-4">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-3xl font-bold">×</button>
+      <div id="modalContainer" class="max-w-full max-h-[90vh] overflow-auto rounded shadow-lg bg-white"></div>
     </div>
   </div>
 
   <script>
-    function openModal(src, isPdf = false) {
+    function openModal(src, isPdf = false) { // isPdf 인자는 이제 필요 없지만, 기존 다른 호출을 위해 남겨둠
       const container = document.getElementById('modalContainer');
-      if (isPdf) {
-        // PDF가 모달 컨테이너의 전체 높이를 사용하도록 h-full로 변경
-        container.innerHTML = `<embed src="${src}" type="application/pdf" class="w-full h-full" />`;
-      } else {
-        container.innerHTML = `<img src="${src}" alt="프로젝트 이미지" class="max-w-full max-h-[90vh] rounded" />`;
-      }
+      // 이제 모든 파일은 이미지로 처리됩니다.
+      container.innerHTML = `<img src="${src}" alt="프로젝트 이미지" class="max-w-full max-h-[90vh] rounded" />`;
+      
       document.getElementById('imageModal').classList.remove('hidden');
-      // body의 overflow-hidden을 주어 스크롤바가 숨겨지지만, 모달 자체의 스크롤을 활용
-      document.body.classList.add('overflow-hidden'); 
+      document.body.classList.add('overflow-hidden');
     }
 
     function closeModal() {
