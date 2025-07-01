@@ -38,57 +38,50 @@
   <section id="projects" class="bg-gray-800 p-10 max-w-6xl mx-auto">
     <h3 class="text-2xl font-semibold mb-6">Selected Projects</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
+      <div onclick="openModal('img/cve_코드.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">CVE 리포트 자동화 시스템</h4>
         <p class="mt-2">NVD 데이터 수집 → CVSS/CWE 기반 리포트 자동 생성 및 메일링.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
+      <div onclick="openModal('img/IoC_list.pdf', true)" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">OTX IoC 파이프라인</h4>
         <p class="mt-2">OTX·Twitter 등에서 IoC 1,000건 이상 수집 → 중복 제거 및 보고서 자동화.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
-        <h4 class="text-xl font-bold">허니토큰 기반 침입 탐지 시스템</h4>
-        <p class="mt-2">다양한 채널에 허니토큰 삽입 → 실시간 탐지 및 대시보드화.</p>
+      <div>
+        <a href="https://nonoyas.github.io/honeypot-dashboard/" target="_blank" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600">
+          <h4 class="text-xl font-bold">허니토큰 기반 침입 탐지 시스템</h4>
+          <p class="mt-2">다양한 채널에 허니토큰 삽입 → 실시간 탐지 및 대시보드화.</p>
+        </a>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
+      <div onclick="openModal('img/유사도메인.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">유사 도메인 도용 탐지기</h4>
         <p class="mt-2">브랜드 키워드 기반 도메인 500건 분석 → 악성 도메인 5건 이상 탐지.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
+      <div onclick="openModal('img/geo맵 시각화.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">GeoMap 위협 시각화</h4>
         <p class="mt-2">악성 IP 기반 위치정보 시각화 → 경영진 보고 활용.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
-        <h4 class="text-xl font-bold">보안 트렌드 분석 시스템</h4>
-        <p class="mt-2">일일 뉴스 수집 후 AI 기반 요약 → 주간 트렌드 리포트 자동화.</p>
+      <div>
+        <a href="https://github.com/nonoyas/AI-security-news-analyzer" target="_blank" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600">
+          <h4 class="text-xl font-bold">보안 트렌드 분석 시스템</h4>
+          <p class="mt-2">일일 뉴스 수집 후 AI 기반 요약 → 주간 트렌드 리포트 자동화.</p>
+        </a>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
+      <div onclick="openModal('img/kisa 및 ncsc 권고문 수집.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">보안 권고문 분석기</h4>
         <p class="mt-2">KISA/NCSC 권고문 수집 → 핵심 요약 후 자동 메일링.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
+      <div onclick="openModal('img/일단위_뉴스클리핑.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">보안 뉴스 클리핑 메일러</h4>
         <p class="mt-2">일 15건 뉴스 요약 → 오전 9시 자동 발송 시스템 구축.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
+      <div onclick="openModal('img/XDR_구축.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">Wazuh 기반 XDR 시스템</h4>
         <p class="mt-2">Sysmon 연동 및 탐지 룰 커스터마이징 → 침해 대응 고도화.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl shadow">
+      <div onclick="openModal('img/PRTG_API.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">PRTG 연동 경보 시스템</h4>
         <p class="mt-2">장비 상태 연동 → 이벤트 발생 시 청각 경보로 실시간 대응.</p>
       </div>
-
     </div>
   </section>
 
@@ -111,5 +104,32 @@
   <footer class="bg-gray-800 text-center p-6 text-sm text-gray-400">
     © 2025 조성근. All rights reserved.
   </footer>
+
+  <!-- 모달 팝업 -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+    <div class="relative max-w-6xl mx-auto p-4">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-3xl font-bold">×</button>
+      <div id="modalContainer" class="max-w-full max-h-[90vh] overflow-auto rounded shadow-lg bg-white"></div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, isPdf = false) {
+      const container = document.getElementById('modalContainer');
+      if (isPdf) {
+        container.innerHTML = `<iframe src="${src}" class="w-[90vw] h-[90vh]" frameborder="0"></iframe>`;
+      } else {
+        container.innerHTML = `<img src="${src}" alt="프로젝트 이미지" class="max-w-full max-h-[90vh] rounded" />`;
+      }
+      document.getElementById('imageModal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.add('hidden');
+      document.getElementById('modalContainer').innerHTML = '';
+      document.body.classList.remove('overflow-hidden');
+    }
+  </script>
 </body>
 </html>
