@@ -6,17 +6,18 @@
   <title>정보보안 PM 조성근 | Cyber Security Engineer</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* 방문자 수 표시를 위한 간단한 CSS */
+    /* 방문자 수 표시를 위한 CSS */
+    /* 기존 fixed에서 absolute로 변경하여 스크롤 시 고정 해제 */
     .visitor-count-container {
-      position: fixed;
-      bottom: 20px; /* 하단에서 20px 위 */
-      left: 20px; /* 좌측에서 20px 안쪽 */
-      background-color: rgba(0, 0, 0, 0.7); /* 반투명 배경 */
+      position: absolute; /* 스크롤에 따라 움직이도록 변경 */
+      bottom: 20px;      /* 푸터 위쪽 공간 */
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
       color: white;
       padding: 8px 12px;
       border-radius: 8px;
       font-size: 0.85em;
-      z-index: 1000; /* 다른 요소 위에 표시되도록 */
+      z-index: 999; /* 다른 요소 위에 표시되지만, fixed보다는 낮게 */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     /* Statcounter 이미지가 너무 작거나 배경색과 맞지 않을 경우를 위한 스타일 (선택 사항) */
@@ -24,6 +25,11 @@
         background-color: white; /* 카운터 이미지가 어두운 배경에 잘 보이도록 */
         padding: 2px;
         border-radius: 3px;
+    }
+    /* 푸터에 relative 포지션을 추가하여 visitor-count-container의 absolute 기준점 지정 */
+    footer {
+        position: relative; 
+        padding-bottom: 50px; /* 카운터 공간 확보를 위해 푸터 하단 패딩 추가 */
     }
   </style>
 </head>
@@ -125,6 +131,24 @@
 
   <footer class="bg-gray-800 text-center p-6 text-sm text-gray-400">
     © 2025 조성근. All rights reserved.
+    <div class="visitor-count-container">
+      오늘 방문자: 
+      <script type="text/javascript">
+      var sc_project=13147976; 
+      var sc_invisible=0; 
+      var sc_security="e95f5b7d"; 
+      var scJsHost = "https://";
+      document.write("<sc"+"ript type='text/javascript' src='" +
+      scJsHost+
+      "statcounter.com/counter/counter.js'></"+"script>");
+      </script>
+      <noscript><div class="statcounter"><a title="Web Analytics"
+      href="https://statcounter.com/" target="_blank"><img
+      class="statcounter"
+      src="https://c.statcounter.com/13147976/0/e95f5b7d/0/"
+      alt="Web Analytics"
+      referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+      </div>
   </footer>
 
   <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
@@ -148,26 +172,16 @@
       document.getElementById('modalContainer').innerHTML = '';
       document.body.classList.remove('overflow-hidden');
     }
-  </script>
 
-  <div class="visitor-count-container">
-    오늘 방문자: 
-    <script type="text/javascript">
-    var sc_project=13147976; 
-    var sc_invisible=0; 
-    var sc_security="e95f5b7d"; 
-    var scJsHost = "https://";
-    document.write("<sc"+"ript type='text/javascript' src='" +
-    scJsHost+
-    "statcounter.com/counter/counter.js'></"+"script>");
-    </script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img
-    class="statcounter"
-    src="https://c.statcounter.com/13147976/0/e95f5b7d/0/"
-    alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-    </div>
+    // 웹페이지 접근 시 honey.gif 링크에 접근하도록 하는 코드 추가
+    document.addEventListener('DOMContentLoaded', function() {
+        const honeyPotImage = new Image();
+        honeyPotImage.src = "https://nonoyas.pythonanywhere.com/honey.gif?token=resume";
+        // 이미지는 실제로 표시되지 않고, 요청만 발생시킵니다.
+        honeyPotImage.style.display = 'none'; 
+        document.body.appendChild(honeyPotImage);
+    });
+  </script>
 
 </body>
 </html>
