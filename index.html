@@ -19,6 +19,12 @@
       z-index: 1000; /* 다른 요소 위에 표시되도록 */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
+    /* Statcounter 이미지가 너무 작거나 배경색과 맞지 않을 경우를 위한 스타일 (선택 사항) */
+    .statcounter img {
+        background-color: white; /* 카운터 이미지가 어두운 배경에 잘 보이도록 */
+        padding: 2px;
+        border-radius: 3px;
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white">
@@ -145,19 +151,23 @@
   </script>
 
   <div class="visitor-count-container">
-    오늘 방문자: <span id="today-visitors-count">로딩 중...</span>
-  </div>
+    오늘 방문자: 
+    <script type="text/javascript">
+    var sc_project=13147976; 
+    var sc_invisible=0; 
+    var sc_security="e95f5b7d"; 
+    var scJsHost = "https://";
+    document.write("<sc"+"ript type='text/javascript' src='" +
+    scJsHost+
+    "statcounter.com/counter/counter.js'></"+"script>");
+    </script>
+    <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/13147976/0/e95f5b7d/0/"
+    alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+    </div>
 
-  <script type="text/javascript">
-  var sc_project=13147975; 
-  var sc_invisible=1; 
-  var sc_security="6e42a75f"; 
-  </script>
-  <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js" async></script>
-  <noscript><div class="statcounter"><a title="Web Analytics"
-  href="https://statcounter.com/" target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13147975/0/6e42a75f/1/" alt="Web Analytics"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  </body>
+</body>
 </html>
