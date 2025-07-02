@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>정보보안 PM 조성근 | Cyber Security Engineer</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* 방문자 수 표시를 위한 간단한 CSS */
+    .visitor-count-container {
+      position: fixed;
+      bottom: 20px; /* 하단에서 20px 위 */
+      left: 20px; /* 좌측에서 20px 안쪽 */
+      background-color: rgba(0, 0, 0, 0.7); /* 반투명 배경 */
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.85em;
+      z-index: 1000; /* 다른 요소 위에 표시되도록 */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white">
   <header class="bg-gray-800 shadow p-6">
@@ -114,9 +129,8 @@
   </div>
 
   <script>
-    function openModal(src, isPdf = false) { // isPdf 인자는 이제 필요 없지만, 기존 다른 호출을 위해 남겨둠
+    function openModal(src, isPdf = false) {
       const container = document.getElementById('modalContainer');
-      // 이제 모든 파일은 이미지로 처리됩니다.
       container.innerHTML = `<img src="${src}" alt="프로젝트 이미지" class="max-w-full max-h-[90vh] rounded" />`;
       
       document.getElementById('imageModal').classList.remove('hidden');
@@ -129,5 +143,10 @@
       document.body.classList.remove('overflow-hidden');
     }
   </script>
-</body>
+
+  <div class="visitor-count-container">
+    오늘 방문자: <span id="today-visitors-count">로딩 중...</span>
+  </div>
+
+  </body>
 </html>
