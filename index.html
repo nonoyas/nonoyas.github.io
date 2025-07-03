@@ -28,7 +28,7 @@
     }
     /* 푸터에 relative 포지션을 추가하여 visitor-count-container의 absolute 기준점 지정 */
     footer {
-        position: relative; 
+        position: relative;
         padding-bottom: 50px; /* 카운터 공간 확보를 위해 푸터 하단 패딩 추가 */
     }
   </style>
@@ -65,6 +65,14 @@
   <section id="projects" class="bg-gray-800 p-10 max-w-6xl mx-auto">
     <h3 class="text-2xl font-semibold mb-6">Selected Projects(click)</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div onclick="openModal('img/자동화도구.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
+        <h4 class="text-xl font-bold">자동화 및 모니터링 시스템 개발</h4>
+        <p class="mt-2">
+          보안 업무 자동화: 스케줄링 및 경보 메일 발송 시스템<br>
+          웹 위변조 및 KISA 경보단계: 자동 감지/알림 도구
+        </p>
+      </div>
+
       <div onclick="openModal('img/cve_코드.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">CVE 리포트 자동화 시스템</h4>
         <p class="mt-2">NVD 데이터 수집 → CVSS/CWE 기반 리포트 자동 생성 및 메일링.</p>
@@ -132,11 +140,11 @@
   <footer class="bg-gray-800 text-center p-6 text-sm text-gray-400">
     © 2025 조성근. All rights reserved.
     <div class="visitor-count-container">
-      Visitors : 
+      Visitors :
       <script type="text/javascript">
-      var sc_project=13147976; 
-      var sc_invisible=0; 
-      var sc_security="e95f5b7d"; 
+      var sc_project=13147976;
+      var sc_invisible=0;
+      var sc_security="e95f5b7d";
       var scJsHost = "https://";
       document.write("<sc"+"ript type='text/javascript' src='" +
       scJsHost+
@@ -162,7 +170,7 @@
     function openModal(src, isPdf = false) {
       const container = document.getElementById('modalContainer');
       container.innerHTML = `<img src="${src}" alt="프로젝트 이미지" class="max-w-full max-h-[90vh] rounded" />`;
-      
+
       document.getElementById('imageModal').classList.remove('hidden');
       document.body.classList.add('overflow-hidden');
     }
@@ -178,7 +186,7 @@
         const honeyPotImage = new Image();
         honeyPotImage.src = "https://nonoyas.pythonanywhere.com/honey.gif?token=resume";
         // 이미지는 실제로 표시되지 않고, 요청만 발생시킵니다.
-        honeyPotImage.style.display = 'none'; 
+        honeyPotImage.style.display = 'none';
         document.body.appendChild(honeyPotImage);
     });
   </script>
