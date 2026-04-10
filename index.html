@@ -86,65 +86,118 @@
 
       <div onclick="openModal('img/cve_코드.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">CVE 리포트 자동화 시스템</h4>
-        <p class="mt-2">NVD 데이터 수집 → CVSS/CWE 기반 리포트 자동 생성 및 메일링.</p>
+        <p class="mt-2">
+          문제: 다량의 CVE 대응 어려움<br>
+          조치: 하루단위 자동화 CVE 분류를 통해 선별적으로 대응<br>
+          결과: 대응 시간 단축 및 핵심 CVE 대응 트리아지
+        </p>
       </div>
       <div onclick="openModal('img/IoC.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">OTX IoC 파이프라인</h4>
-        <p class="mt-2">OTX 등에서 IoC 1,000건 이상 수집 → 중복 제거 및 보고서 자동화.</p>
+        <p class="mt-2">
+          문제: 글로벌 IoC 지표 수집하여 위협 대응 강화 필요<br>
+          조치: 자동 수집, 분류, 보고서생성 프로젝트 개발<br>
+          결과: 보고서 자동생성으로 보안관제 인력 핸들링 감소
+        </p>
       </div>
       <div>
         <a href="https://nonoyas.github.io/honeypot-dashboard/" target="_blank" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600">
           <h4 class="text-xl font-bold">허니토큰 기반 침입 탐지 시스템</h4>
-          <p class="mt-2">다양한 채널에 허니토큰 삽입 → 실시간 탐지 및 대시보드화.</p>
+          <p class="mt-2">
+          문제: 기존 방향과 다른 X축 탐지 방법 확보<br>
+          조치: 허니토큰 배포후 X축 탐지 축 확보조치<br>
+          결과: X축 탐지 방법 확보
+          </p>
         </a>
       </div>
       <div onclick="openModal('img/유사도메인.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">유사 도메인 도용 탐지기</h4>
-        <p class="mt-2">브랜드 키워드 기반 도메인 500건 분석 → 악성 도메인 5건 이상 탐지(주단위 자동보고서 발송).</p>
+        <p class="mt-2">
+          문제: 유사 도메인 도용 하여 고객사 피싱 및 Brand 평판 훼손 예방<br>
+          조치: 사전 파일 생성하여 8시간 간격 자동 조회<br>
+          결과: 고객 Brand 평판 보호
+        </p>
       </div>
       <div onclick="openModal('img/geo맵 시각화.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">GeoMap 위협 시각화</h4>
-        <p class="mt-2">악성 IP 기반 위치정보 시각화 -> 글로벌 위협 TI 실시간 확인</p>
+        <p class="mt-2">
+          문제: 위협 지표들의 시각화를 통해 경계심 강화<br>
+          조치: 오픈소스 라이브러리 활용하여 대시보드 구성<br>
+          결과: 보안관제 시각화 구현
+        </p>
       </div>
       <div>
         <a href="https://github.com/nonoyas/AI-security-news-analyzer" target="_blank" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600">
           <h4 class="text-xl font-bold">보안 트렌드 분석 시스템</h4>
-          <p class="mt-2">일일 뉴스 수집 후 AI 기반 요약 → 주간 트렌드 리포트 자동화.</p>
+          <p class="mt-2">
+          문제: 정보보호 트렌드 동향 추구<br>
+          조치: 일단위, 주단위 자료 수집, 정렬 후 리포팅 시스템 구축<br>
+          결과: 정보보호 트렌드 확보
+          </p>
         </a>
       </div>
       <div onclick="openModal('img/kisa 및 ncsc 권고문 수집.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">보안 권고문 분석기</h4>
-        <p class="mt-2">KISA/NCSC 권고문 수집 → 핵심 요약 후 자동 메일링.</p>
+        <p class="mt-2">
+          문제: 수시 정보 확인으로 불필요한 리소스 낭비<br>
+          조치: 크롤링 및 비교체계를 통해 자동 경고 체계 개발<br>
+          결과: 보안인력의 리소스를 핵심 업무에 집중
+        </p>
       </div>
       <div onclick="openModal('img/일단위_뉴스클리핑.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">보안 뉴스 클리핑 메일러</h4>
-        <p class="mt-2">일 15건 뉴스 요약 → 오전 9시 자동 발송 시스템 구축.</p>
+        <p class="mt-2">
+          문제: 습관적인 정보보호 이슈 체크 필요<br>
+          조치: 매일 08시 정보보호 이슈 메일 알림 체계 개발<br>
+          결과: 상시 이슈 체크 가능
+        </p>
       </div>
       <div onclick="openModal('img/XDR_구축.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">Wazuh 기반 XDR 시스템 구축</h4>
-        <p class="mt-2">Sysmon 연동 및 탐지 룰 커스터마이징 → 침해 대응 고도화.</p>
+        <p class="mt-2">
+          문제: XDR(EDR) 탐지 체계 구축 필요<br>
+          조치: 오픈소스 XDR 시스템 구축<br>
+          결과: XDR 구축으로 엔드포인드 대응 강화
+        </p>
       </div>
       <div onclick="openModal('img/PRTG_API.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">PRTG 연동 경보 시스템</h4>
-        <p class="mt-2">장비 상태 연동 → 이벤트 발생 시 청각 경보로 실시간 대응.</p>
+        <p class="mt-2">
+          문제: 네트워크 가용성 문제시 즉각 인지 필요<br>
+          조치: 가용성 문제시 API 키값을 통한 청각 비프음 발생<br>
+          결과: 즉각적인 네트워크 가용성 확보
+        </p>
       </div>
       <div onclick="openModal('img/감지프로그램.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">자동화 프로그램 장애 감지(자가 복구 시스템 구축)</h4>
-        <p class="mt-2">프로그램들의 실행 감지 → 자동으로 재실행하는 '자가 복구' 로직을 구현, 상시 모니터링 및 수동 조작의 필요성을 최소화</p>
+        <p class="mt-2">
+          문제: 상시적인 자동화 프로그램 관리 필요<br>
+          조치: 스케쥴링을 통한 자동화 프로그램 관리 및 복구<br>
+          결과: 보안인력의 리소스를 핵심 업무에 집중
+        </p>
       </div>
       <div onclick="openModal('img/리포트.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">리포트 시스템</h4>
-        <p class="mt-2">자동화된 보안 리포트 생성(주간windows업데이트, 주간보안위협브리프, 일일보안뉴스)</p>
+        <p class="mt-2">
+          문제: 고객에게 필요한 가치 제공<br>
+          조치: 일단위 주단위등 리포트 자동화 생성<br>
+          결과: 고객에게 가치 제공
+        </p>
       </div>
       <div onclick="openModal('img/악성봇감지기.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">악성봇 감지기</h4>
-        <p class="mt-2">악성봇 감지기(인입봇 검증, 리버스 및 정방향 조회 GUI 구현)</p>
+        <p class="mt-2">
+          문제: 보안관제 인력의 악성봇 대응 능력 필요<br>
+          조치: 정방향, 역방향 조회 GUI프로그램 개발<br>
+          결과: 균일한 품질의 악성 봇 대응 능력 확보
+        </p>
       </div>
         <div onclick="openModal('img/RAG기반.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">RAG 기반 보안분석기(in-context)</h4>
         <p class="mt-2">
-          내부 보안 규정 및 솔루션 매뉴얼 대상 RAG(검색 증강 생성) 적용<br>
-          LLM 할루시네이션 최소화 및 정확한 보안 질의응답 시스템 구현
+          문제: 보안관제 인력의 탐지보고서 품질 향상 필요<br>
+          조치: VT 및 RAG기반 할루시네이션 제거한 탐지보고서 개발<br>
+          결과: 균일한 품질의 탐지보고서 생성 가능
         </p>
       </div>
     </div>
