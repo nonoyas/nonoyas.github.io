@@ -7,29 +7,26 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     /* 방문자 수 표시를 위한 CSS */
-    /* 기존 fixed에서 absolute로 변경하여 스크롤 시 고정 해제 */
     .visitor-count-container {
-      position: absolute; /* 스크롤에 따라 움직이도록 변경 */
-      bottom: 20px;      /* 푸터 위쪽 공간 */
+      position: absolute; 
+      bottom: 20px;      
       left: 20px;
       background-color: rgba(0, 0, 0, 0.7);
       color: white;
       padding: 8px 12px;
       border-radius: 8px;
       font-size: 0.85em;
-      z-index: 999; /* 다른 요소 위에 표시되지만, fixed보다는 낮게 */
+      z-index: 999; 
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
-    /* Statcounter 이미지가 너무 작거나 배경색과 맞지 않을 경우를 위한 스타일 (선택 사항) */
     .statcounter img {
-        background-color: white; /* 카운터 이미지가 어두운 배경에 잘 보이도록 */
+        background-color: white; 
         padding: 2px;
         border-radius: 3px;
     }
-    /* 푸터에 relative 포지션을 추가하여 visitor-count-container의 absolute 기준점 지정 */
     footer {
         position: relative;
-        padding-bottom: 50px; /* 카운터 공간 확보를 위해 푸터 하단 패딩 추가 */
+        padding-bottom: 50px; 
     }
   </style>
 </head>
@@ -63,19 +60,21 @@
     </ul>
   </section>
 
-<section id="achievements" class="p-10 max-w-4xl mx-auto">
-  <h3 class="text-2xl font-semibold mb-4">Key Achievements</h3>
-  <ul class="list-disc ml-6 text-lg space-y-2">
-    <li>티켓 처리 프로세스 개선 → 평균 대응 시간 약 25% 단축</li>
-    <li>반복 업무 자동화 도입 → 운영 리소스 절감</li>
-    <li>사회초년생 인력 대상 대응 기준 정립 → 자율 처리 비율 증가</li>
-    <li>업무 분배 구조 개선 → PM 의존도 감소</li>
-  </ul>
-</section>
+  <section id="achievements" class="p-10 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">Key Achievements</h3>
+    <ul class="list-disc ml-6 text-lg space-y-2">
+      <li>티켓 처리 프로세스 개선 → 평균 대응 시간 약 25% 단축</li>
+      <li>반복 업무 자동화 도입 → 운영 리소스 절감</li>
+      <li>사회초년생 인력 대상 대응 기준 정립 → 자율 처리 비율 증가</li>
+      <li>업무 분배 구조 개선 → PM 의존도 감소</li>
+    </ul>
+  </section>
   
   <section id="projects" class="bg-gray-800 p-10 max-w-6xl mx-auto">
-    <h3 class="text-2xl font-semibold mb-6">Selected Projects(click)</h3>
+    <h3 class="text-2xl font-semibold mb-6">Selected Projects (click)</h3>
+    
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
       <div onclick="openModal('img/자동화도구.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">자동화 및 모니터링 시스템 개발</h4>
         <p class="mt-2">
@@ -93,6 +92,7 @@
           결과: 대응 시간 단축 및 핵심 CVE 대응 트리아지
         </p>
       </div>
+
       <div onclick="openModal('img/IoC.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">OTX IoC 파이프라인</h4>
         <p class="mt-2">
@@ -101,6 +101,7 @@
           결과: 보고서 자동생성으로 보안관제 인력 핸들링 감소
         </p>
       </div>
+
       <div>
         <a href="https://nonoyas.github.io/honeypot-dashboard/" target="_blank" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600">
           <h4 class="text-xl font-bold">허니토큰 기반 침입 탐지 시스템</h4>
@@ -111,6 +112,7 @@
           </p>
         </a>
       </div>
+
       <div onclick="openModal('img/유사도메인.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">유사 도메인 도용 탐지기</h4>
         <p class="mt-2">
@@ -119,6 +121,7 @@
           결과: 고객 Brand 평판 보호
         </p>
       </div>
+
       <div onclick="openModal('img/geo맵 시각화.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">GeoMap 위협 시각화</h4>
         <p class="mt-2">
@@ -127,6 +130,7 @@
           결과: 보안관제 시각화 구현
         </p>
       </div>
+
       <div>
         <a href="https://github.com/nonoyas/AI-security-news-analyzer" target="_blank" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600">
           <h4 class="text-xl font-bold">보안 트렌드 분석 시스템</h4>
@@ -137,6 +141,7 @@
           </p>
         </a>
       </div>
+
       <div onclick="openModal('img/kisa 및 ncsc 권고문 수집.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">보안 권고문 분석기</h4>
         <p class="mt-2">
@@ -145,6 +150,7 @@
           결과: 보안인력의 리소스를 핵심 업무에 집중
         </p>
       </div>
+
       <div onclick="openModal('img/일단위_뉴스클리핑.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">보안 뉴스 클리핑 메일러</h4>
         <p class="mt-2">
@@ -153,6 +159,7 @@
           결과: 상시 이슈 체크 가능
         </p>
       </div>
+
       <div onclick="openModal('img/XDR_구축.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">Wazuh 기반 XDR 시스템 구축</h4>
         <p class="mt-2">
@@ -161,6 +168,7 @@
           결과: XDR 구축으로 엔드포인드 대응 강화
         </p>
       </div>
+
       <div onclick="openModal('img/PRTG_API.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">PRTG 연동 경보 시스템</h4>
         <p class="mt-2">
@@ -169,6 +177,7 @@
           결과: 즉각적인 네트워크 가용성 확보
         </p>
       </div>
+
       <div onclick="openModal('img/감지프로그램.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">자동화 프로그램 장애 감지(자가 복구 시스템 구축)</h4>
         <p class="mt-2">
@@ -177,6 +186,7 @@
           결과: 보안인력의 리소스를 핵심 업무에 집중
         </p>
       </div>
+
       <div onclick="openModal('img/리포트.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">리포트 시스템</h4>
         <p class="mt-2">
@@ -185,6 +195,7 @@
           결과: 자동화된 리포트로 고객 의사결정 지원
         </p>
       </div>
+
       <div onclick="openModal('img/악성봇감지기.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">악성봇 감지기</h4>
         <p class="mt-2">
@@ -193,7 +204,8 @@
           결과: 균일한 품질의 악성 봇 대응 능력 확보
         </p>
       </div>
-        <div onclick="openModal('img/RAG기반.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
+
+      <div onclick="openModal('img/RAG기반.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">RAG 기반 보안분석기(in-context)</h4>
         <p class="mt-2">
           문제: 보안관제 인력의 탐지보고서 품질 향상 필요<br>
@@ -201,7 +213,8 @@
           결과: 균일한 품질의 탐지보고서 생성 가능
         </p>
       </div>
-        <div onclick="openModal('img/랜섬.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
+
+      <div onclick="openModal('img/랜섬.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
         <h4 class="text-xl font-bold">랜섬웨어 그룹 동향 보고서</h4>
         <p class="mt-2">
           문제: 다크웹 위협 정보 파편화 및 대응 우선순위 식별의 한계 <br>
@@ -209,28 +222,28 @@
           결과: 실행 가능한 인텔리전스(Actionable Intelligence)구현
         </p>
       </div>
-    </div>
-        <div onclick="openModal('img/vLLM.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer">
+
+      <div onclick="openModal('img/vLLM.png')" class="bg-gray-700 p-6 rounded-xl shadow cursor-pointer md:col-span-2">
         <h4 class="text-xl font-bold">망분리 대응 폐쇄형 보안 AI 인프라 엔지니어링</h4>
         <p class="mt-2">
           문제: 규제 및 정보 유출 우려로 인한 외부 상용 AI 활용 불가 <br>
           조치: 외부망 차단 환경 내 대용량 GPU 기반 Llama-3 70B 독자 구축 <br>
           결과: 유출 리스크 0%의 사내 독립형 맞춤형 분석 인프라 확보
         </p>
-     </div>
-    </div>
-  </section>
+      </div>
 
-<section id="career" class="p-10 max-w-7xl mx-auto whitespace-nowrap">
-  <h3 class="text-2xl font-semibold mb-4">Process Improvement</h3>
-  <ul class="list-disc ml-6 text-lg space-y-2">
-    <li>SLA 기반 대응 체계 정립</li>
-    <li>이벤트 분류 기준 수립</li>
-    <li>업무 템플릿 도입 (요구사항/완료 기준 명확화)</li>
-  </ul>
-</section>
+    </div> </section>
+
+  <section id="process" class="p-10 max-w-7xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">Process Improvement</h3>
+    <ul class="list-disc ml-6 text-lg space-y-2">
+      <li>SLA 기반 대응 체계 정립</li>
+      <li>이벤트 분류 기준 수립</li>
+      <li>업무 템플릿 도입 (요구사항/완료 기준 명확화)</li>
+    </ul>
+  </section>
   
-  <section id="career" class="p-10 max-w-7xl mx-auto whitespace-nowrap">
+  <section id="career" class="p-10 max-w-7xl mx-auto">
     <h3 class="text-2xl font-semibold mb-4">Career Summary</h3>
     <ul class="list-disc ml-6 text-lg space-y-2">
       <li><strong>티앤디소프트</strong> - MSS센터 PM (2024.09~): 전문기업 선정 총괄 및 SOC 자동화 아키텍처 설계(운영 도구 20종 이상 개발)</li>
@@ -291,11 +304,9 @@
       document.body.classList.remove('overflow-hidden');
     }
 
-    // 웹페이지 접근 시 honey.gif 링크에 접근하도록 하는 코드 추가
     document.addEventListener('DOMContentLoaded', function() {
         const honeyPotImage = new Image();
         honeyPotImage.src = "https://nonoyas.pythonanywhere.com/honey.gif?token=resume";
-        // 이미지는 실제로 표시되지 않고, 요청만 발생시킵니다.
         honeyPotImage.style.display = 'none';
         document.body.appendChild(honeyPotImage);
     });
